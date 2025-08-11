@@ -1,63 +1,72 @@
-Oracle Next Education
-Programador: Jose Luis Lara
-Proyecto: Amigo Secreto
+Challenge Amigo Secreto
 
-Descripción del proyecto
-Este proyecto consiste en un sistema para realizar un sorteo de nombres, simulando el juego del Amigo Secreto.
+- Tecnologías utilizadas
+    HTML5
+    CSS3
+    JavaScript
 
-El usuario ingresa los nombres en un campo de texto con id="amigo".
-En este proyecto, la cantidad máxima de nombres está limitada a 10.
+- Funcionalidades
+    Agregar nombres:
+    Se ingresan en un campo de texto.
+    Si está vacío, muestra una alerta.
+    Si el nombre ya existe, no se añade.
 
-Funcionamiento
-1. Agregar nombres
-Cada vez que se presiona el botón button-add, que está vinculado a la función agregarAmigo(), se realiza lo siguiente:
+    Visualización dinámica:
+    Los nombres se muestran en una lista en pantalla.
 
-El nombre ingresado se agrega al arreglo listaDeAmigos[].
+    Límite de participantes:
+    Máximo de 10 nombres en la lista.
 
-Automáticamente se muestra en la pantalla dentro de un <ul> con id="listaAmigos".
+    Sorteo aleatorio:
+    El sistema elige un ganador al azar.
+    Muestra el nombre en un parrafo del HTML.
 
-Validaciones dentro de agregarAmigo():
-Campo vacío: si el campo con id="amigo" (ligado a la variable nombreAmigo) está vacío, se mostrará un mensaje de error mediante alert.
+- Descripción:
+Este proyecto es una aplicación sencilla en JavaScript, HTML y CSS que permite:
+    Agregar nombres de amigos a una lista.
+    Mostrar en pantalla todos los amigos agregados.
+    Seleccionar al azar un amigo como ganador del sorteo.
 
-Nombre duplicado: si el nombre ya existe en la lista, se mostrará un mensaje de error mediante alert.
+Es ideal para practicar manipulación del DOM, manejo de arrays y lógica básica de programación en JavaScript.
 
-Límite máximo: si ya hay 10 nombres, se mostrará un mensaje indicando que todos los espacios para el sorteo están ocupados.
+- Funcionalidades:
+    Agregar amigos
+    El usuario escribe un nombre en el campo de texto.
+    Si el campo está vacío, se muestra una alerta solicitando un nombre válido.
+    Se permite un máximo de 10 amigos en la lista.
+    No se permiten nombres duplicados.
 
-2. Realizar el sorteo
-Cuando se presiona el botón button-draw, que está vinculado a la función sortearAmigo(), ocurre lo siguiente:
+Después de agregar un nombre, el campo de entrada se limpia automáticamente.
 
-Se verifica que listaDeAmigos[] no esté vacío.
+- Visualizar lista
+    Los nombres ingresados se muestran en un listado <ul> dentro de la página.
+    El listado se actualiza cada vez que se agrega un nombre.
 
-Si está vacío, se muestra un alert avisando que no hay nombres para sortear.
+- Realizar sorteo
+    Al presionar el botón "Sortear Amigo", el sistema selecciona un nombre al azar de la lista.
+    Muestra el nombre ganador en un <p> del HTML.
+    Si la lista está vacía, se muestra un mensaje indicando que no hay nombres para sortear.
 
-Si hay nombres:
 
-Se genera un número aleatorio mediante Math.random() (entre 0 y 0.999).
+📂 Estructura del proyecto
+pgsql
+Copiar
+Editar
+📦 amigo-secreto
+ ┣ 📂 .idea
+ ┃ ┣ amigo-secreto.iml
+ ┃ ┣ misc
+ ┃ ┣ modules
+ ┃ ┣ vcs
+ ┃ ┗ workspace
+ ┣ 📂 assets
+ ┃ ┣ amigo-secreto.png
+ ┃ ┗ play_circle_outline.png
+ ┣ 📜 app.js
+ ┣ 📜 index.html
+ ┣ 📜 style.css
+ ┗ 📜 README.md
 
-Este número se multiplica por la cantidad de elementos del arreglo.
-
-Se utiliza Math.floor() para redondear hacia abajo y obtener un número entero que sirva como índice.
-
-Se obtiene el nombre correspondiente al índice generado en listaDeAmigos[] y se almacena en la variable nombreGanador.
-
-3. Mostrar el resultado
-Para mostrar el ganador:
-
-Se llama a la función asignarTexto(), que utiliza el DOM para buscar el <p> en el HTML.
-
-Esta función escribe el mensaje:
-"El ganador es <nombreGanador>"
-directamente en el párrafo.
-
-Notas técnicas
-DOM: El modelo de objetos del documento se utiliza para buscar elementos (querySelector) y modificar su contenido (textContent).
-
-Funciones clave:
-
-agregarAmigo() → valida y agrega nombres a la lista.
-
-listadoEnPantalla() → actualiza visualmente la lista en el <ul>.
-
-sortearAmigo() → elige un ganador aleatorio.
-
-asignarTexto() → escribe el resultado en el HTML.
+Autor
+José Luis Lara Noriega
+Proyecto creado como práctica para reforzar conceptos básicos de JavaScript y manipulación del DOM.
