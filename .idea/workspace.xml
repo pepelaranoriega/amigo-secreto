@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="788cce69-d4a0-48e0-89bc-c237c2229c02" name="Changes" comment="" />
+    <list default="true" id="788cce69-d4a0-48e0-89bc-c237c2229c02" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,8 +42,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.27812.49" />
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.27812.49" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.28293.22" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.28293.22" />
       </set>
     </attachedChunks>
   </component>
@@ -54,6 +56,8 @@
       <updated>1754617426191</updated>
       <workItem from="1754617427304" duration="1428000" />
       <workItem from="1754952971611" duration="26000" />
+      <workItem from="1755447482237" duration="7000" />
+      <workItem from="1757550871304" duration="75000" />
     </task>
     <servers />
   </component>

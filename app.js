@@ -13,23 +13,31 @@ function asignarTexto(selector, texto) {
   elementoHTML.innerHTML = texto; //Asigna el texto al elemento indicado.
 }
 
-function agregarAmigo () {
-    if (nombreAmigo.value === "") {
-        alert ("Debes ingresar un nombre"); //Si el nombre está en blanco, arrojará alerta.
-    }else{
-        if (listaDeAmigos.includes(nombreAmigo.value)){
-            alert ("Ese nombre ya existe en la lista");
-            return;
-        }
-        if (listaDeAmigos.length < 10) {
-        listaDeAmigos.push(nombreAmigo.value); //Asigné un número máximo de 10 amigos para hacer la rifa.
-        nombreAmigo.value = "";
-        listadoEnPantalla();
-        console.log (listaDeAmigos);
-            }else{
-            alert ("Haz asignado todos espacios disponibles para el sorteo"); //Si se intenta agregar el amigo numero "11", arroja esta alerta.
-        }
-    }
+function agregarAmigo() {
+  const nombre = nombreAmigo.value.trim();
+  if (nombre === "") {
+    alert("Debes ingresar un nombre");  //El campo no puede estar vacío
+    return;
+  }
+  const soloTexto = /^[a-zA-ZÁÉÍÓÚÜÑáéíóúüñ\s]+$/;
+  if (!soloTexto.test(nombre)) { //Solo letras y espacios (incluye acentos y ñ)
+    alert("Solo se permiten letras y espacios");
+    return;
+  }
+  const existe = listaDeAmigos.some(n => n.toLowerCase() === nombre.toLowerCase());
+  if (existe) {
+    alert("Ese nombre ya existe en la lista");  //Duplicado (ignorando mayúsculas/minúsculas)
+    return;
+  }
+  if (listaDeAmigos.length >= 10) {
+    alert("Has asignado todos los espacios disponibles para el sorteo"); //Límite de 10 amigos en la lista de sorteo
+    return;
+  }
+
+  listaDeAmigos.push(nombre); //Agregamos amigos
+  nombreAmigo.value = ""; //El campo regresa estár en blanco
+  listadoEnPantalla();
+  console.log(listaDeAmigos);
 }
 
 function listadoEnPantalla() {
